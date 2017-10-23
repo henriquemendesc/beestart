@@ -1,4 +1,4 @@
-package com.dev.bob.beestart;
+package com.dev.bob.beestart.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.dev.bob.beestart.Activities.CadastroActivity;
 import com.dev.bob.beestart.Activities.LoginActivity;
+import com.dev.bob.beestart.R;
+import com.dev.bob.beestart.Util.StartToolBarTitle;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnCad;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //altera o título na toolbar
-        startToolBar(this,getString(R.string.app_name));
+        StartToolBarTitle.startToolBar(this,getString(R.string.app_name));
 
         btnCad = (Button) findViewById(R.id.btnCadastro);
         btnCad.setOnClickListener(new View.OnClickListener() {
@@ -41,10 +43,5 @@ public class MainActivity extends AppCompatActivity {
     private void startOtherActivity(Class<?> cls) {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
-    }
-    //para que os títulos possam ser alterados nas activities
-    public static void startToolBar(Activity activity,String title){
-        activity.setTitle(title);
-
     }
 }

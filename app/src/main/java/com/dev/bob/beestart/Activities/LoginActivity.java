@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.dev.bob.beestart.MainActivity;
 import com.dev.bob.beestart.R;
+import com.dev.bob.beestart.Util.StartToolBarTitle;
 
 public class LoginActivity extends AppCompatActivity {
     private Button btnLoginScreen;
@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //alterar o título na toolbar
-        MainActivity.startToolBar(this,getString(R.string.string_title_login));
+        StartToolBarTitle.startToolBar(this,getString(R.string.string_title_login));
 
         btnLoginScreen = (Button)findViewById(R.id.btnScreenLogin);
         btnLoginScreen.setOnClickListener(new View.OnClickListener() {
