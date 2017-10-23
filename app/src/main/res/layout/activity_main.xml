@@ -34,7 +34,7 @@
         android:layout_above="@+id/btnCadastro"
         android:layout_marginBottom="7dp"
         android:background="@drawable/btn_bee"
-        android:elevation="5dp"
+
         android:padding="10dp"
         android:text="@string/string_login_system"
         android:textColor="@color/colorBranco"
