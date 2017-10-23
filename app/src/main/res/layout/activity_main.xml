@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context="com.dev.bob.beestart.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="238dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/bee" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgHome"
+        android:gravity="center_horizontal"
+        android:text="@string/string_welcome"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCadastro"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/btn_bee"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:text="@string/string_login_system"
+        android:textColor="@color/colorBranco"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_bee"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:text="@string/string_cadastro"
+        android:textColor="@color/colorBranco"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

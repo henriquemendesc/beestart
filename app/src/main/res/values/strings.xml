@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Desafio BeeStart</string>
+    <string name="string_welcome">Bem Vindo ao desafio da BeeStart</string>
+    <string name="string_login_system">Acessar Sistema</string>
+    <string name="string_cadastro">Cadastre-se</string>
+    <string name="string_cad_screen">Você está no Cadastro</string>
+    <string name="string_back">Voltar</string>
+    <string name="string_login_screen">Você está no Login</string>
 </resources>
