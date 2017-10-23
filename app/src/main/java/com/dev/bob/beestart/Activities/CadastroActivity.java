@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.dev.bob.beestart.MainActivity;
 import com.dev.bob.beestart.R;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -13,6 +14,8 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+        //alterar o título na toolbar
+        MainActivity.startToolBar(this,getString(R.string.string_title_cadastro));
 
         btnScreenCad = (Button)findViewById(R.id.btnScreenCad);
         btnScreenCad.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,6 @@
 package com.dev.bob.beestart;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //altera o título na toolbar
+        startToolBar(this,getString(R.string.app_name));
 
         btnCad = (Button) findViewById(R.id.btnCadastro);
         btnCad.setOnClickListener(new View.OnClickListener() {
@@ -34,8 +37,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //abre a activity ao clicar no botão específico
     private void startOtherActivity(Class<?> cls) {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
+    }
+    //para que os títulos possam ser alterados nas activities
+    public static void startToolBar(Activity activity,String title){
+        activity.setTitle(title);
+
     }
 }

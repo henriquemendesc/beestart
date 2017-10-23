@@ -11,8 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btnScreenLogin"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/string_login_screen"
         android:textSize="18dp"
@@ -20,12 +18,13 @@
 
     <Button
         android:id="@+id/btnScreenLogin"
+        android:layout_marginTop="7dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/btn_bee"
         android:elevation="5dp"
-        android:padding="10dp"
+        android:padding="15dp"
         android:text="@string/string_back"
         android:textColor="@color/colorBranco"
         android:textSize="15dp"
